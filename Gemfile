@@ -6,7 +6,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'spree_reviews', :git => 'git://github.com/spree/spree_reviews.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,5 +37,9 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 gem 'spree', '1.3.1'
+#gem 'spree', '1.3', :path => '../spree'
+#gem 'spree_fancy', :path => '../spree_fancy'
+
 gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '1-3-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-stable'
+gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'

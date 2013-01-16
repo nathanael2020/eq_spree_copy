@@ -10,4 +10,11 @@
  *
  *= require_self
  *= require_tree .
+ 
+
+ *= require jquery-ui-1.9.2.custom
+ *= require jquery.bxslider
+ *= require icons
+ *= require icons-codes
+
  */
