@@ -36,6 +36,14 @@ color: #0033ee;
 }
 */
 
+#main-image {
+      text-align: center;
+      border: #919191;
+      background-color: #FFFFFF;
+      margin-bottom: 20px;
+
+}
+
 #product-images {
 
 
@@ -43,10 +51,13 @@ color: #0033ee;
       text-align: center;
       border: $default_border;
       background-color: $product_background_color;
+      margin-bottom: 20px;
       
       img {
         min-height: 240px;
-        max-width: 100%; /* Fluid images for product 
+        max-width: 100%;
+        
+        /* Fluid images for product 
 */
       }
     }
@@ -165,7 +176,11 @@ display: table;
 .ui-tabs { position: relative; padding-right: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed")  
 */
 .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0em 0em; }
-.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+
+/*.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }*/
+
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; padding: 0; white-space: nowrap; }
+
 .ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 3em .5em 0em; text-decoration: none; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
@@ -400,4 +415,36 @@ background: transparent;
 
 #header.row {
 margin-bottom: 0px;
+}
+
+#reviews div.review {
+  border-top: 1px rgb(217, 217, 219) solid;
+  border-bottom: none;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+p.ratings-stars {
+display: block;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+div.review {
+
+	margin-top: 15px;
+	
+}
+
+.ratings, .ratings-stars {
+	line-height: 0;
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+
+#ratings .p {
+	padding-top: 5px;
+	padding-bottom: 0px;	
 }

@@ -1,6 +1,6 @@
 
 <div id="reviews">
-  <h6 class="product-section-title"><%= t(:reviews) %></h6>
+  <h6 class="product-section-title"><%= t(:average_rating) %></h6>
   <% if Spree::Reviews::Config[:include_unapproved_reviews] == false and @product.reviews.approved.count == 0 %>
     <p class="reviews-none"><%=t('no_reviews_available')%></p>
   <% else %>

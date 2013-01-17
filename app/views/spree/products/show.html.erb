@@ -1,40 +1,57 @@
-
-  
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+    
   <script>
   $(document).ready(function() {
     $("#tabs").tabs();
   });
   </script>
 
-<div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
-  <% @body_id = 'product-details' %>
-
-  <div class="columns six alpha" data-hook="product_left_part">
-    <div class="row" data-hook="product_left_part_wrap">
-
-      <div id="product-images" data-hook="product_images">
-        <div id="main-image" data-hook>
-          <%= render :partial => 'image' %>
-        </div>
-        <div id="thumbnails" data-hook>
-          <%= render :partial => 'thumbnails' %>
-        </div>
-
-        <div id="cart-form" data-hook="cart_form">
-          <%= render :partial => 'cart_form' %>
-        </div>
-        
-        <div id="recently-viewed" data-hook="recently_viewed">
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <% if "products" == params[:controller] && @taxon %>
+      <%= render :partial => 'spree/shared/filters' %>
+    <% else %>
+      <%= render :partial => 'spree/shared/taxonomies' %>
+    <% end %>
+  </div>
+          <div id="recently-viewed" data-hook="recently_viewed">
             <%= render :partial => 'spree/shared/recently_viewed_products' %>    
         </div>
 
+      <%= render :partial => 'taxons' %>
 
-      </div>
+<% end %>
+
+
+
+<div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
+  <% @body_id = 'product-details' %>
+
+  <div class="columns twelve alpha" data-hook="product_left_part">
+    <div class="row" data-hook="product_left_part_wrap">
+
+      <span id="product-images" data-hook="product_images">
+        <span id="main-image" data-hook>
+          <%= render :partial => 'image' %>
+        </span>
+        <span id="thumbnails" data-hook>
+          <%= render :partial => 'thumbnails' %>
+        </span>
+
+      </span>
+
+        <span id="cart-form" data-hook="cart_form">
+          <%= render :partial => 'cart_form' %>
+        </span>
+
     
     </div>
   </div>
 
-  <div class="columns ten omega" data-hook="product_right_part">
+  <div class="columns twelve omega" data-hook="product_right_part">
 
         <h1 class="product-title" itemprop="name"><%= accurate_title %></h1>
 
@@ -76,9 +93,7 @@
     <div class="row" data-hook="product_right_part_wrap">
 
       </div>
-
-      <%= render :partial => 'taxons' %>
-
+      
     </div>
   </div>
 
