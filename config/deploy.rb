@@ -1,5 +1,10 @@
-set :application, "eq_spree_copy"
-set :repository,  "git://github.com/nathanael2020/eq_spree_copy.git"
+# config/deploy.rb
+
+#require "bundler/capistrano"
+
+set :application, 	"eq_spree_copy"
+set :repository,  	"git://github.com/nathanael2020/eq_spree_copy.git"
+#set :rails_env,		"production"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -10,6 +15,7 @@ role :db,  "184.106.81.10", :primary => true # This is where Rails migrations wi
 #role :db,  "your slave db-server here"
 
 set :user, "nathanael"
+set :group, "staff"
 
 default_run_options[:pty] = true
 
