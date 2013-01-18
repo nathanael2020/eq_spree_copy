@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: eq_spree_copy_dev
   pool: 5
-  username: nathanael
+  username: nathanaelmiksis
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: eq_spree_copy_test
   pool: 5
-  username: nathanael
+  username: nathanaelmiksis
   password:
 
 production:
