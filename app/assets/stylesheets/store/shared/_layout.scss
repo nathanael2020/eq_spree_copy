@@ -173,9 +173,10 @@ ul#products li {
 footer#footer {
 /*  @include single-box-shadow(darken(#50A2F3, 10), 0, 0, 15px, 0, true);
   */// background: image-url("store/footer-bg.png") repeat center;
-  background-color: lighten(#50A2F3, 5);
+  background-color: rgba(148,101,63,1);
   margin-top: 30px;
-  border-top: 5px solid lighten(#50A2F3, 30);
+/*  border-top: 5px solid lighten(#50A2F3, 30);*/
+  border-top: 5px solid #a69073;
   padding-top: 30px;
   font-size: 14px;
   line-height: 24px;

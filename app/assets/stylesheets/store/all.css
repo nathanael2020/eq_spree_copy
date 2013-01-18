@@ -381,7 +381,8 @@ font-size: 12px;
 text-transform: uppercase;
 font-weight: bold;
 margin-top: 0px;
-border-bottom: 1px solid #d9d9db;
+/*border-bottom: 1px solid #d9d9db;*/
+border-bottom: none;
 padding-bottom: 6px;
 }
 
@@ -447,4 +448,9 @@ div.review {
 #ratings .p {
 	padding-top: 5px;
 	padding-bottom: 0px;	
+}
+
+a {
+	
+	color: #55733c;
 }
