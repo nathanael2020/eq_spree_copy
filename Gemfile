@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'pg'
 gem 'spree_reviews', :git => 'git://github.com/spree/spree_reviews.git'
+gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,7 +33,7 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+ gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
