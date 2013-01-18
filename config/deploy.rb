@@ -41,7 +41,7 @@ namespace :deploy do
   end 
  
  
-  namespace :assets do
+namespace :assets do
  
     desc <<-DESC
       Run the asset precompilation rake task. You can specify the full path \
@@ -58,24 +58,22 @@ namespace :deploy do
     task :precompile, :roles => :web, :except => { :no_release => true } do
       # Only precompile assets if any assets changed
       # http://www.bencurtis.com/2011/12/skipping-asset-compilation-with-capistrano/
-      begin
 
+begin
       from = source.next_revision(current_revision)
       
-      rescue 
+            rescue 
         err_no = true
        end
-      if err_no || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
-        run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
-      
-#      if fetch(:force_assets, false) || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ lib/assets/ | wc -l").to_i > 0
+
+      if fetch(:force_assets, false) || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ lib/assets/ | wc -l").to_i > 0
         # Just like original: https://github.com/capistrano/capistrano/blob/master/lib/capistrano/recipes/deploy/assets.rb
-#        run "cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile"
+        run "cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile"
       else
         logger.info "Skipping asset pre-compilation because there were no asset changes"
       end
     end
  
   end
- 
+  
 end
