@@ -6,8 +6,8 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-#gem 'spree_reviews', :git => 'git://github.com/spree/spree_reviews.git'
-gem 'spree_reviews', '0.50.1'
+gem 'spree_reviews', :git => 'git://github.com/spree/spree_reviews.git', :ref => '41c5318612a38f9173226379c3790c6c79e11ffe'
+#gem 'spree_reviews', '0.50.1'
 gem 'unicorn'
 gem 'rake'
 
