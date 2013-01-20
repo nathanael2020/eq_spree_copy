@@ -293,6 +293,6 @@ DEPENDENCIES
   spree_auth_devise!
   spree_gateway!
   spree_recently_viewed!
-  spree_reviews
+  spree_reviews (= 0.50.1)
   uglifier (>= 1.0.3)
   unicorn
