@@ -6,8 +6,10 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'spree_reviews', :git => 'git://github.com/spree/spree_reviews.git'
+#gem 'spree_reviews', :git => 'git://github.com/spree/spree_reviews.git'
+gem 'spree_reviews'
 gem 'unicorn'
+gem 'rake'
 
 # Gems used only for assets and not required
 # in production environments by default.
