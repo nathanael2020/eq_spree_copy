@@ -26,7 +26,7 @@ logger.level = Capistrano::Logger::DEBUG
  
 # Since we're using pty, load the path ourselves
 set :default_environment, {
-  "PATH" => "/usr/local/rbenv/versions/1.9.2-p290/:/usr/local/rbenv/versions/1.9.3-p327/ruby/1.9.1/gems/:/home/nathanael/.gem/ruby:/usr/local/rbenv/shims:/home/nathanael/.rbenv/bin:/usr/local/rbenv/shims:/home/nathanael/.rbenv/bin:/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/nathanael/.rbenv/shims:/home/nathanael/.rbenv/bin:$PATH"
+  "PATH" => "/usr/local/rbenv/versions/1.9.3-p327/ruby/1.9.1/gems/:/home/nathanael/.gem/ruby:/usr/local/rbenv/shims:/home/nathanael/.rbenv/bin:/usr/local/rbenv/shims:/home/nathanael/.rbenv/bin:/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/nathanael/.rbenv/shims:/home/nathanael/.rbenv/bin:$PATH"
 }
  
  
